@@ -54,48 +54,49 @@ const Companies = () => {
   };
 
   return (
-    <div>
-      <h1>Companies</h1>
-      <table>
+    <div className="text-center">
+      <h1 className="text-2xl font-bold">Companies</h1>
+      <table className="w-full text-left table-collapse">
         <thead>
-          <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Location</th>
+          <tr className="bg-gray-200">
+            <th className="px-4 py-2">ID</th>
+            <th className="px-4 py-2">Name</th>
+            <th className="px-4 py-2">Location</th>
           </tr>
         </thead>
         <tbody>
           {companies.map((company) => (
-            <tr key={company.id}>
-              <td>{company.id}</td>
-              <td>{company.name}</td>
-              <td>{company.location}</td>
+            <tr key={company.id} className="bg-white">
+              <td className="border px-4 py-2">{company.id}</td>
+              <td className="border px-4 py-2">{company.name}</td>
+              <td className="border px-4 py-2">{company.location}</td>
             </tr>
           ))}
         </tbody>
       </table>
-
-      <button onClick={openModal}>Add Company</button>
-
+  
+      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={openModal}>Add Company</button>
+  
       <Modal isOpen={modalIsOpen} onRequestClose={closeModal} style={customStyles}>
-        <h2>Add Company</h2>
-        <div>
-          <label>
+        <h2 className="text-2xl font-bold">Add Company</h2>
+        <div className="p-4">
+          <label className="block font-bold">
             Name:
-            <input type="text" value={newCompanyName} onChange={handleNameChange} />
+            <input className="border border-gray-400 p-2" type="text" value={newCompanyName} onChange={handleNameChange} />
           </label>
           <br />
-          <label>
+          <label className="block font-bold">
             Location:
-            <input type="text" value={newCompanyLocation} onChange={handleLocationChange} />
+            <input className="border border-gray-400 p-2" type="text" value={newCompanyLocation} onChange={handleLocationChange} />
           </label>
           <br />
-          <button onClick={addCompany}>Add</button>
-          <button onClick={closeModal}>Cancel</button>
+          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={addCompany}>Add</button>
+          <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded ml-4" onClick={closeModal}>Cancel</button>
         </div>
       </Modal>
     </div>
   );
+  
 };
 
 export default Companies;

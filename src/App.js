@@ -19,10 +19,10 @@ class App extends Component {
                 <Link class="inline-block border border-blue-500 rounded py-1 px-3 bg-blue-500 text-white" to="/">Dashboard</Link>
               </li>
               <li class="mr-3">
-                <Link class="inline-block border border-blue-500 rounded py-1 px-3 bg-blue-500 text-white" to="/add-company">Add Company</Link>
+                <Link class="inline-block border border-blue-500 rounded py-1 px-3 bg-blue-500 text-white" to="/add-company">Companies</Link>
               </li>
               <li class="mr-3">
-                <Link class="inline-block border border-blue-500 rounded py-1 px-3 bg-blue-500 text-white" to="/add-customer">Add Customer</Link>
+                <Link class="inline-block border border-blue-500 rounded py-1 px-3 bg-blue-500 text-white" to="/add-customer">Customers</Link>
               </li>
             </ul>
           </nav>
