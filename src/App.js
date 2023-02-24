@@ -14,15 +14,15 @@ class App extends Component {
       <Router>
         <div>
           <nav>
-            <ul>
-              <li>
-                <Link to="/">Dashboard</Link>
+            <ul class="flex">
+              <li class="mr-3">
+                <Link class="inline-block border border-blue-500 rounded py-1 px-3 bg-blue-500 text-white" to="/">Dashboard</Link>
               </li>
-              <li>
-                <Link to="/add-company">Add Company</Link>
+              <li class="mr-3">
+                <Link class="inline-block border border-blue-500 rounded py-1 px-3 bg-blue-500 text-white" to="/add-company">Add Company</Link>
               </li>
-              <li>
-                <Link to="/add-customer">Add Customer</Link>
+              <li class="mr-3">
+                <Link class="inline-block border border-blue-500 rounded py-1 px-3 bg-blue-500 text-white" to="/add-customer">Add Customer</Link>
               </li>
             </ul>
           </nav>
